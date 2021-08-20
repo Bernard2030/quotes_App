@@ -8,11 +8,11 @@ import { Quotes } from '../quotes';
 })
 export class QuotesComponent implements OnInit {
   quotes:Quotes[] = [
-    {id:1, name:'Morgan', description:'The love of skirts will kill you'},
-    {id:2, name:'Bencarson', description:'The value of love is unmatched'},
-    {id:3, name:'Lawrence', description:'Love your neigbour as you love your self'},
-    {id:4, name:'Sydney', description:'Never Compromise ladie life'},
-    {id:5, name:'Labeca', description:'Count on me always'}
+    {id:1, name:'Morgan', quoteType:'Motivational', description:'The love of skirts will kill you'},
+    {id:2, name:'Bencarson', quoteType:'Inspiration', description:'The value of love is unmatched'},
+    {id:3, name:'Lawrence', quoteType:'Love', description:'Love your neigbour as you love your self'},
+    {id:4, name:'Sydney', quoteType:'Success', description:'Never Compromise ladie life'},
+    {id:5, name:'Labeca', quoteType:'Life', description:'Count on me always'}
   ];
 
   constructor() { }
