@@ -1,8 +1,10 @@
+<h5 class="card-title">{{quote.quoteType}}</h5>
+            <p class="card-text">{{quote.description}}</p>
+            <!-- <p class="card-text"><small class="text-muted">{{quote.author}}</small></p> -->
+            <p class="card-text"><small class="text-muted">{{quote.quoteCreator}}</small></p>
+            <p class="card-text"><small class="text-muted"> {{quote.createdDate |dateCount}} days a go</small></p>
 <p>
   {{quote.author}}
 </p>
-<button (click)= 'quotesDelete(true)'>Delete </button>
-<!-- <p>
-  {{quote.author}}
-</p> -->
-<!-- <button (click)= 'quoteComplete(true)'>complete</button> -->
+<a (click)= 'quotesDelete(quote)'>Delete </a>
+
