@@ -9,7 +9,7 @@
 </div> -->
 <div class="row">
   <h1>Welcome to Executive Quotes</h1>
-  <div class="col-md-4" *ngFor='let quote of quotes; let i = index'>
+  <div class="col-md-4" *ngFor='let quote of quotes'>
 
     <div class="card mb-3" style="max-width: 540px;">
       <div class="row g-0">
@@ -24,7 +24,7 @@
             <p class="card-text"><small class="text-muted">{{quote.author}}</small></p>
             <p class="card-text"><small class="text-muted">{{quote.quoteCreator}}</small></p>
             <p class="card-text"><small class="text-muted"> on {{quote.createdDate}}</small></p>
-            <button (click)='toggleDetails(i)'>See More</button>
+            <!-- <button (click)='toggleDetails(i)'>See More</button> -->
             <i class="fa-fa">1F44D</i><br>
             <i class="fa-fa">1F44E</i>
           </div>
