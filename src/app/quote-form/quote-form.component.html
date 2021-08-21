@@ -1,11 +1,11 @@
-<div class="container-fluid">
-  <h2 class="text-center">Create a new Goal</h2>
+<div class="container-fluid ">
+  <h2 class="text-center">Create A Quote</h2>
   <hr>
-  <form>
+  <form #quotesForm='ngForm'>
       <div class="form-group">
 
           <label for="name">Quote Type</label>
-          <input type="text" required class="form-control" id="name">
+          <input type="text" required class="form-control" id="name" [(ngModel)]="newQuote.quoteType" name="quoteType">
 
       </div>
       <div class="form-group">
