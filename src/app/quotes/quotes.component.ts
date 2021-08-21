@@ -8,11 +8,14 @@ import { Quotes } from '../quotes';
 })
 export class QuotesComponent implements OnInit {
   quotes:Quotes[] = [
-    {id:1, name:'Morgan', quoteType:'Motivational', description:'The love of skirts will kill you'},
-    {id:2, name:'Bencarson', quoteType:'Inspiration', description:'The value of love is unmatched'},
-    {id:3, name:'Lawrence', quoteType:'Love', description:'Love your neigbour as you love your self'},
-    {id:4, name:'Sydney', quoteType:'Success', description:'Never Compromise ladie life'},
-    {id:5, name:'Labeca', quoteType:'Life', description:'Count on me always'}
+    new Quotes(1, "Morgan", "confidence", "No body can make you feel inferior without your consent", new Date("2021, 5, 16"))
+    new Quotes(1, "BenCarson", )
+    // {1, 'Morgan', 'Confidence', 'No body can make you feel inferior without your consent'},
+    // {id:2, :'Bencarson', quoteType:'Inspiration', description:'Aperson who never made a mistake never tried anything new.'},
+    // {id:3, name:'Lawrence', quoteType:'Love', description:'Love your neigbour as you love your self'},
+    // {id:4, name:'Sydney', quoteType:'Success', description:'Continuous efforts, not strength or intelligence is the key to unlocking our potential'},
+    // {id:5, name:'Dorcas', quoteType:'Love', description:'No woman ever hates a man for being in love with her,but many a woman hates a man for being a friend to her'},
+    // {id:6, name:'Bernard', quoteType:'Change', description:'They say that time changes things but you actually have to change them yourself'},
   ];
 
   constructor() { }
