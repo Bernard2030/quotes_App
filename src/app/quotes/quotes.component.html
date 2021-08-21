@@ -1,9 +1,33 @@
-<div>
-  <h1>My Quotes </h1>
+<!-- <div>
+  <h1>Welcome to Executive Quotes</h1>
    <ul>
-     <li *ngFor='let quotes of quotes'>
-       {{quotes.name}}
-       <app-quotes-detail [quotes]='quotes'></app-quotes-detail>
+     <li *ngFor='let quote of quotes'>
+       {{quote.quoteType}} <br> {{quote.description}}
+       <app-quotes-detail [quote]='quote'></app-quotes-detail>
      </li>
    </ul>
+</div> -->
+<div class="row">
+  <h1>Welcome to Executive Quotes</h1>
+  <div class="col-md-4" *ngFor='let quote of quotes'>
+
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="../../assets/images/Quoteimage.jpg" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+
+            <h5 class="card-title">{{quote.quoteType}}</h5>
+            <p class="card-text">{{quote.description}}</p>
+            <p class="card-text"><small class="text-muted">{{quote.author}}</small></p>
+            <p class="card-text"><small class="text-muted">{{quote.quoteCreator}}</small></p>
+            <p class="card-text"><small class="text-muted"> on {{quote.createdDate}}</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>
