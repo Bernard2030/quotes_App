@@ -1,15 +1,7 @@
-<!-- <div>
-  <h1>Welcome to Executive Quotes</h1>
-   <ul>
-     <li *ngFor='let quote of quotes'>
-       {{quote.quoteType}} <br> {{quote.description}}
-       <app-quotes-detail [quote]='quote'></app-quotes-detail>
-     </li>
-   </ul>
-</div> -->
+
 <div class="row">
   <h1>Welcome to Executive Quotes</h1>
-  <div class="col-md-4" *ngFor='let quote of quotes; let i = index', *ngIf='quotes.showDescription' [quotes]='quotes'>
+  <div class="col-md-4" *ngFor='let quote of quotes; let i = index'>
 
     <div class="card mb-3" style="max-width: 540px;">
       <div class="row g-0">
@@ -18,11 +10,14 @@
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <app-quotes-detail [quote]='quote', (quoteDeleteEvent)='quotesDelete($event,i)'></app-quotes-detail>
+            <h5 class="card-title">{{quote.quoteType}}</h5>
+            <p>{{quote.description}}</p>
+            <p>
+              {{quote.author}}
+            </p>
+             <a (click)='toggleDetails(i)'>See More</a>
+             <app-quotes-detail [quote]='quote' (quoteUpvoteEvent)="Upvote($event,i)"*ngIf='quote.showDescription'(quoteDeleteEvent)='quotesDelete($event,i)'></app-quotes-detail>
 
-             <button (click)='toggleDetails(i)'>See More</button>
-            <i class="fa-fa">1F44D</i>
-            <i class="fa-fa">1F44E</i>
           </div>
         </div>
       </div>
@@ -30,6 +25,6 @@
 
   </div>
   <div class="col-md-6 ">
-    <app-quote-form ></app-quote-form>
+    <app-quote-form (addQuotesEvent)="addnewQuote($event)"></app-quote-form>
   </div>
 </div>

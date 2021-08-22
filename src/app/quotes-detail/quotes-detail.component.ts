@@ -14,9 +14,15 @@ export class QuotesDetailComponent implements OnInit {
   this.quoteDeleteEvent.emit(theQuoteToDelete)
 
   }
+  @Output() quoteUpvoteEvent = new EventEmitter<Quotes>();
 
+  quotestoUpvote(quoteToUpvote:Quotes){
+  this.quoteUpvoteEvent.emit(quoteToUpvote)
+
+  }
   @Input() quote: Quotes;
-  
+
+
 
   constructor() { }
 

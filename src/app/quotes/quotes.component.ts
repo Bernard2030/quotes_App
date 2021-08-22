@@ -30,6 +30,17 @@ export class QuotesComponent implements OnInit {
   toggleDetails(index){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
+  Upvote(quoteUpvoteEvent,index){
+    if(quoteUpvoteEvent){
+      this.quotes[index].Upvote++
+    }
+  }
+  addnewQuote(quote){
+    // let quotelength = this.quotes.length
+    // quote.id = quotelength+1
+    // quote.createdDate = new Date()
+    this.quotes.push(quote)
+  }
 
   constructor() { }
 

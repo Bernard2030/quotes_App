@@ -1,43 +1,44 @@
 <div class="container-fluid">
   <h2 class="text-center">Create A Quote</h2>
   <hr>
-  <form #goalForm='ngForm'>
+  <form (ngSubmit)='submitQuotes()' #quoteForm='ngForm'>
       <div class="form-group">
 
-          <label for="name">Quote Type</label>
-          <input type="text" class="form-control" id="quote" [(ngModel)]="newQuotes.name" name="name" #name='ngModel' required>
-          <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+          <label for="quoteType">Quote Type</label>
+          <input type="text" class="form-control" id="quote" [(ngModel)]="newQuote.quoteType" name="name" #quoteType='ngModel' required>
+          <div [hidden]="quoteType.valid || quoteType.pristine" class="alert alert-danger">
             <p>Quote Type is Required!</p>
           </div>
       </div>
       <div class="form-group">
 
         <label for="name">Author</label>
-        <input type="text" class="form-control" id="quote" [(ngModel)]="newQuotes.author" name="author" #name='ngModel' required>
+        <input type="text" class="form-control" id="quote" [(ngModel)]="newQuote.author" name="author" #author='ngModel' required>
         <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
           <p>Author is Required!</p>
         </div>
     </div>
-    <div class="form-group">
-
-      <label for="quoteCreator">Quote Creator</label>
-      <input type="text" class="form-control" id="quote" [(ngModel)]="newQuotes.quoteCreator" name="quoteCreator" #name='ngModel' required>
-      <div [hidden]="quoteCreator.valid || quoteCreator.pristine" class="alert alert-danger">
-        <p>Quote Creator is Required!</p>
-      </div>
-  </div>
       <div class="form-group">
 
           <label for="description">Quote Description</label>
-          <textarea class="form-control" id="description" rows="4" [(ngModel)]="newQuotes.description" name="description" #description="ngModel" required></textarea>
+          <textarea class="form-control" id="description" rows="4" [(ngModel)]="newQuote.description" name="description" #description="ngModel" required></textarea>
           <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
             <p>Quote Description is Required!</p>
           </div>
       </div>
+      <!-- Display {{newQuote.description}} -->
       <div class="form-group">
 
-          <label for="complete">Date Added</label>
-          <input type='date' id="created" [(ngModel)]="newQuotes.createdDate" name="createdDate" #completeDate="ngModel" required>
+        <label for="quoteCreator">Quote Creator</label>
+        <input type="text" class="form-control" id="quote" [(ngModel)]="newQuote.quoteCreator" name="quoteCreator" #quoteCreator='ngModel' required>
+        <div [hidden]="quoteCreator.valid || quoteCreator.pristine" class="alert alert-danger">
+          <p>Quote Creator is Required!</p>
+        </div>
+    </div>
+      <div class="form-group">
+
+          <label for="complete">Date Added </label>
+          <input type='date' id="created" [(ngModel)]="newQuote.createdDate" name="createdDate" #createdDate="ngModel" required>
           <div [hidden]="createdDate.valid || createdDate.pristine" class="alert alert-danger">
             <p>Date is required</p>
           </div>
