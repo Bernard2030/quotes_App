@@ -20,6 +20,11 @@ export class QuotesDetailComponent implements OnInit {
   this.quoteUpvoteEvent.emit(quoteToUpvote)
 
   }
+
+  quotesToDownVote(quoteToDownVote:Quotes){
+    this.quoteUpvoteEvent.emit(quoteToDownVote)
+
+    }
   @Input() quote: Quotes;
 
 

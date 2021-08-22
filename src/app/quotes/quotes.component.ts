@@ -35,6 +35,11 @@ export class QuotesComponent implements OnInit {
       this.quotes[index].Upvote++
     }
   }
+  DownVote(quoteToDownVoteEvent,index){
+    if(quoteToDownVoteEvent){
+      this.quotes[index].DownVote++
+    }
+  }
   addnewQuote(quote){
     // let quotelength = this.quotes.length
     // quote.id = quotelength+1
