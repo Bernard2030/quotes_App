@@ -35,8 +35,8 @@ export class QuotesComponent implements OnInit {
       this.quotes[index].Upvote++
     }
   }
-  DownVote(quoteToDownVoteEvent,index){
-    if(quoteToDownVoteEvent){
+  DownVote(quoteDownVoteEvent,index){
+    if(quoteDownVoteEvent){
       this.quotes[index].DownVote++
     }
   }

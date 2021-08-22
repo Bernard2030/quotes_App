@@ -1,0 +1,23 @@
+.one{
+  color:orangered;
+}
+.two{
+  color: orange;
+}
+.author{
+  color: rgb(49, 59, 37);
+}
+.describe{
+  color: rgb(167, 44, 0);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+}
+.quote{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+.welcome{
+  color: chocolate;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bolder;
+}
