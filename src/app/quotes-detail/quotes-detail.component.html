@@ -1,10 +1,8 @@
+<!-- <p class="card-text">{{quote.description}}</p> -->
+<!-- <p class="card-text"><small class="text-muted">{{quote.author}}</small></p> -->
+<p class="card-text"><small class="text-muted">{{quote.quoteCreator}}</small></p>
+<p class="card-text"><small class="text-muted"> {{quote.createdDate |dateCount}} days a go</small></p>
 
-            <!-- <p class="card-text">{{quote.description}}</p> -->
-            <!-- <p class="card-text"><small class="text-muted">{{quote.author}}</small></p> -->
-            <p class="card-text"><small class="text-muted">{{quote.quoteCreator}}</small></p>
-            <p class="card-text"><small class="text-muted"> {{quote.createdDate |dateCount}} days a go</small></p>
-
-<a class="bg-danger rounded p-2" (click)= 'quotesDelete(quote)'>Delete </a>
+<a class="bg-danger rounded p-2" (click)='quotesDelete(quote)'>Delete </a>
 <a (click)='quotestoUpvote(quote)'><i class="fa fa-thumbs-up"></i>{{quote.Upvote}}</a>
 <a (click)='quotesToDownVote(quote)'><i class="fa fa-thumbs-down"></i>{{quote.DownVote}}</a>
-

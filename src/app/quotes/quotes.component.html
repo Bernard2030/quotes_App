@@ -1,4 +1,3 @@
-
 <div class="row">
   <h1 class="welcome"><span class="well">Welcome</span> to Executive Quotes</h1><br><br>
   <div class="col-md-4" *ngFor='let quote of quotes; let i = index'>
@@ -15,8 +14,10 @@
             <p class="author">
               {{quote.author}}
             </p>
-             <a (click)='toggleDetails(i)'><span class="one"> See</span> <span class="two">More</span></a>
-             <app-quotes-detail [quote]='quote' (quoteUpvoteEvent)="Upvote($event,i)" [quote]='quote' (quoteDownVoteEvent)="DownVote($event,i)" *ngIf='quote.showDescription'(quoteDeleteEvent)='quotesDelete($event,i)'></app-quotes-detail>
+            <a (click)='toggleDetails(i)'><span class="one"> See</span> <span class="two">More</span></a>
+            <app-quotes-detail [quote]='quote' (quoteUpvoteEvent)="Upvote($event,i)" [quote]='quote'
+              (quoteDownVoteEvent)="DownVote($event,i)" *ngIf='quote.showDescription'
+              (quoteDeleteEvent)='quotesDelete($event,i)'></app-quotes-detail>
 
           </div>
         </div>
