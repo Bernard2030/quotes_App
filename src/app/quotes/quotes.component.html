@@ -1,31 +1,60 @@
-<div class="row">
-  <h1 class="welcome"><span class="well">Welcome</span> to Executive Quotes</h1><br><br>
-  <div class="col-md-4" *ngFor='let quote of quotes; let i = index'>
+<!-- My nav Bar -->
+<nav id="navbar_top" class="navbar navbar-expand-lg navbar-dark bg-dark text-white fixed-top">
+  <div class="container">
+    <a href="" class="navbar-brand">
+      Executive Quotes
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main_nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a href="#" class="nav-link">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">PAGE 1</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">PAGE 2</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br><br><br>
 
-    <div class="card mb-3" style="max-width: 540px;">
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img src="../../assets/images/Quoteimage.jpg" class="img-fluid rounded-start" alt="...">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="quote card-title">{{quote.quoteType}}</h5>
-            <p class="describe">{{quote.description}}</p>
-            <p class="author">
-              {{quote.author}}
-            </p>
-            <a (click)='toggleDetails(i)'><span class="one"> See</span> <span class="two">More</span></a>
-            <app-quotes-detail [quote]='quote' (quoteUpvoteEvent)="Upvote($event,i)" [quote]='quote'
-              (quoteDownVoteEvent)="DownVote($event,i)" *ngIf='quote.showDescription'
-              (quoteDeleteEvent)='quotesDelete($event,i)'></app-quotes-detail>
+<div class="container">
+  <div class="row">
+    <h1 class="welcome"><span class="well">Welcome</span> to Executive Quotes</h1><br><br>
+    <div class="col-md-4" *ngFor='let quote of quotes; let i = index'>
 
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="../../assets/images/Quoteimage.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="quote card-title">{{quote.quoteType}}</h5>
+              <p class="describe">{{quote.description}}</p>
+              <p class="author">
+                {{quote.author}}
+              </p>
+              <button class="rounded" (click)='toggleDetails(i)'><span class="one"> See </span> <span
+                  class="two">More</span></button>
+              <app-quotes-detail [quote]='quote' (quoteUpvoteEvent)="Upvote($event,i)" [quote]='quote'
+                (quoteDownVoteEvent)="DownVote($event,i)" *ngIf='quote.showDescription'
+                (quoteDeleteEvent)='quotesDelete($event,i)'></app-quotes-detail>
+
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-  </div>
-  <div class="col-md-6 ">
-    <app-quote-form (addQuotesEvent)="addnewQuote($event)"></app-quote-form>
+    </div>
+    <div class="col-md-6 ">
+      <app-quote-form (addQuotesEvent)="addnewQuote($event)"></app-quote-form>
+    </div>
   </div>
 </div>
